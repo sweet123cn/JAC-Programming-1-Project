@@ -53,7 +53,8 @@ public class Question3 {
     	    	}
     	    	System.out.println();  
         }
-    	
+
+		kb.close();
  }
 }
 
