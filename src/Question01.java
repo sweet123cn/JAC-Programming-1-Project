@@ -6,13 +6,16 @@ public class Question01 {
 		// TODO Auto-generated method stub
 		int n1, n2, n3, sum, magicNum;
 		Scanner kb = new Scanner(System.in);
+
+//		prompt the user to enter numbers		
 		System.out.println("Enter 3 2-digital numbers: ");
 		n1 = kb.nextInt();
 		n2 = kb.nextInt();
 		n3 = kb.nextInt();
 		
 		sum = n1 + n2 + n3;
-		
+
+//		According the conditions to get the value of magic Number; 		
 		if (sum % 3 == 0 && sum % 5 != 0) {
 			int sum1 = n1 + n3;
 			int div = n2 / 10;
