@@ -20,27 +20,29 @@ public class Question05 {
 		System.out.println("the array you input:");
 		printIntArray (myarr);
 
-		int[] duplicateArray = findDuplicateIntArray(myarr); //count duplicate numbers
+		int count=1;
 
-		System.out.println("array element duplicate times:");
-		printIntArray (duplicateArray);
-
-		boolean flag = false;
-
-		for ( int j = 0 ;j < myarr.length; j ++)
+		for (int i = 0; i < myarr.length; i++ )
 		{
-			if ( duplicateArray[j] > myarr.length/2)
+			for (int j = 0; j < myarr.length; j++)
 			{
-				System.out.println("the majority element is :" + myarr[j]);
-				flag = true;
+				if ( i != j )
+				{
+					if (myarr[i] ==myarr[j])
+					{
+						count++;
+					}
+				}
+			}
+
+			if (count > myarr.length /2)
+			{
+				System.out.println("majority number is: " + myarr[i]);
 				break;
 			}
 
-		}
+			count = 1;
 
-		if (!flag)
-		{
-			System.out.println("there is no majority element which appears more than " + (myarr.length/2) + " times");
 		}
 
 		kb.close();
@@ -60,29 +62,6 @@ public class Question05 {
 		}
 
 		System.out.println();
-	}
-
-	public static int[] findDuplicateIntArray(int[] myArray)
-	{
-		int[] duplicate = new int[myArray.length];
-
-		int count = 0;
-
-		for (int i = 0; i < myArray.length; i++ )
-		{
-			for (int j : myArray)
-			{
-				if (myArray[i] == j)
-				{
-					count++;
-				}
-			}
-
-			duplicate[i] = count;
-			count = 0;
-		}
-
-		return duplicate;
 	}
 
 }
