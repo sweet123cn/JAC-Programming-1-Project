@@ -37,6 +37,8 @@ public class Question01 {
 			}
 				
 		System.out.println("Your magic number is " + magicNum);
+
+		kb.close();
 	}
 
 }
