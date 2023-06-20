@@ -34,6 +34,8 @@ public class Question2 {
 		        num = temp % joker;
 		 	System.out.print(num + " ");
 		 }
+
+		kb.close();
 	}
 
 }
