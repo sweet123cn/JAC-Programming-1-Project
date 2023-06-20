@@ -24,25 +24,16 @@ public class Question06 {
 		int range = myarr.length;
 
 		int i, j;
-		boolean findFlag = false;
+		int sum1=0, sum2=0;
 
-		for ( i = 0; i <= range; i++ )
+		sum1 = range*(range + 1)/2;
+
+		for ( i = 0; i < range; i++)
 		{
-			for (j = 0; j < range; j++ )
-			{
-				if (myarr[j] == i)
-				{
-					findFlag = true;
-				}
-			}
-
-			if (!findFlag)
-			{
-				System.out.println("the missing number is " + i );
-			}
-
-			findFlag=false;
+			sum2 =sum2 + myarr[i];
 		}
+
+		System.out.println("the mising num is " + (sum1-sum2));
 
 		kb.close();
 	}
