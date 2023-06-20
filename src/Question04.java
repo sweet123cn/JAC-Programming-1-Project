@@ -15,50 +15,45 @@ public class Question04 {
 			System.out.println("Array size error, please input size of array:");
 			size = kb.nextInt();
 		}
- 
-		int radonRange = 100; //random number range:0-99
 
-		int i, temp;
-		
-		int[] myarr1 = randomIntArray(size, radonRange); //generate a random integer array
+		System.out.println("input the element of Ayyar:");
+		int i;
+		int[] myarr = new int[size];
 
-		for ( i = 0 ; i < myarr1.length; i++) //sort
+		for ( i = 0; i < size; i++)
 		{
-			for (int j = i ; j < myarr1.length; j++)
-			{
-				if ( myarr1[i] < myarr1[j])
-				{
-					temp = myarr1[i];
-					myarr1[i] = myarr1[j];
-					myarr1[j] = temp;
-				}
-			} 
+			myarr[i] = kb.nextInt();
 		}
 
+		System.out.println("=======the input array=========");
+
+		printIntArray(myarr); 
+ 
+		sortIntArray(myarr);
+		
 		System.out.println("=======the array sorted=========");
 
-		printIntArray(myarr1); //print the sorted array
+		printIntArray(myarr); //print the sorted array
 
 		kb.close();
 
 	}
 
-	public static int[] randomIntArray(int size,int range)
+	public static void sortIntArray(int[] myarr)
 	{
-		System.out.println("====generate random array======="); 
-
-		Random rand = new Random();
-
-		int[] myarr =new int[size];
-
-		for ( int i = 0; i < size; i++)
+		int i, temp;
+		for ( i = 0 ; i < myarr.length; i++) //sort
 		{
-			myarr[i] = rand.nextInt(range);
+			for (int j = i ; j < myarr.length; j++)
+			{
+				if ( myarr[i] < myarr[j])
+				{
+					temp = myarr[i];
+					myarr[i] = myarr[j];
+					myarr[j] = temp;
+				}
+			} 
 		}
-
-		printIntArray( myarr );
-
-		return myarr;
 
 	}
 
