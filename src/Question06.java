@@ -21,7 +21,46 @@ public class Question06 {
 		System.out.println("the array you input:");
 		printIntArray (myarr);
 
+		int range = myarr.length;
+
+		int i, j;
+		boolean findFlag = false;
+
+		for ( i = 0; i <= range; i++ )
+		{
+			for (j = 0; j < range; j++ )
+			{
+				if (myarr[j] == i)
+				{
+					findFlag = true;
+				}
+			}
+
+			if (!findFlag)
+			{
+				System.out.println("the missing number is " + i );
+			}
+
+			findFlag=false;
+		}
+
 		kb.close();
+	}
+
+	public static void printIntArray( int[] arr )
+	{
+		for ( int i = 0; i < arr.length; i++)
+		{
+			System.out.printf("%2d ",arr[i]);
+
+			if ( (i+1) %10 == 0)
+			{
+				System.out.println();
+			}
+
+		}
+
+		System.out.println();
 	}
 
 }
