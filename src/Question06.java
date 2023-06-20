@@ -23,7 +23,7 @@ public class Question06 {
 
 		int range = myarr.length;
 
-		int i, j;
+		int i;
 		int sum1=0, sum2=0;
 
 		sum1 = range*(range + 1)/2;
