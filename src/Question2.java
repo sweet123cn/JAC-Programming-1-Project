@@ -11,15 +11,22 @@ public class Question2 {
 		int n = kb.nextInt();
 		System.out.println("Enter number: ");
 		int num ;
+		// according the explanation of the question text:
+		// for(int i = 1; i <= n; i++) {
+		// 	int temp = kb.nextInt();
+		// 	if (temp >= joker) {
+		// 		num = joker - 1;
+		// 	} else {
+		// 		num = 0;
+		// 	}
+		// 	System.out.print(num + " ");
+		// }
+		// according the output examples:
 		for(int i = 1; i <= n; i++) {
 			int temp = kb.nextInt();
-			if (temp >= joker) {
-				num = temp % joker;
-			} else {
-				num = temp;
-			}
-			System.out.print(num + " ");
-		}
+		        num = temp % joker;
+		 	System.out.print(num + " ");
+		 }
 	}
 
 }
