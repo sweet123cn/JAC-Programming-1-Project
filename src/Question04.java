@@ -4,6 +4,24 @@ public class Question04 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		int[] myarr = getIntArray();
+
+		System.out.println("=======the input array=========");
+
+		printIntArray(myarr); 
+
+		sortIntArray(myarr);
+		
+		System.out.println("=======the array sorted=========");
+
+		printIntArray(myarr); //print the sorted array
+
+
+	}
+
+	public static int[] getIntArray()
+	{
 		Scanner kb = new Scanner(System.in);
 
 		System.out.println("please input the size of array?");
@@ -15,7 +33,7 @@ public class Question04 {
 			size = kb.nextInt();
 		}
 
-		System.out.println("input the element of Ayyar:");
+		System.out.println("input the element of Array n=" + size +" :");
 		int i;
 		int[] myarr = new int[size];
 
@@ -24,36 +42,28 @@ public class Question04 {
 			myarr[i] = kb.nextInt();
 		}
 
-		System.out.println("=======the input array=========");
-
-		printIntArray(myarr); 
- 
-		sortIntArray(myarr);
-		
-		System.out.println("=======the array sorted=========");
-
-		printIntArray(myarr); //print the sorted array
-
 		kb.close();
 
+		return myarr;
 	}
 
 	public static void sortIntArray(int[] myarr)
 	{
 		int i, temp;
+		
 		for ( i = 0 ; i < myarr.length; i++) //sort
 		{
-			for (int j = i ; j < myarr.length; j++)
+			for (int j = i+1 ; j < myarr.length; j++)
 			{
+				
 				if ( myarr[i] < myarr[j])
 				{
 					temp = myarr[i];
 					myarr[i] = myarr[j];
 					myarr[j] = temp;
 				}
-			} 
+			}
 		}
-
 	}
 
 	public static void printIntArray( int[] arr )
