@@ -5,8 +5,10 @@ public class Question04 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		//ask user input an array
 		int[] myarr1 = getIntArray();
 
+		//copy an array
 		int[] myarr2 = myarr1.clone();
 
 		System.out.println("=========input array=========");
@@ -33,9 +35,9 @@ public class Question04 {
 		Scanner kb = new Scanner(System.in);
 
 		System.out.println("please input the size of array?");
-		int size = kb.nextInt();
+		int size = kb.nextInt();  //input the size of the array
 
-		while (size <= 0)
+		while (size <= 0) //check whether the size is correct or not
 		{
 			System.out.println("Array size error, please input size of array:");
 			size = kb.nextInt();
@@ -45,7 +47,7 @@ public class Question04 {
 		int i;
 		int[] myarr = new int[size];
 
-		for ( i = 0; i < size; i++)
+		for ( i = 0; i < size; i++)  // get keyboard input and put into the array
 		{
 			myarr[i] = kb.nextInt();
 		}
@@ -59,7 +61,7 @@ public class Question04 {
 	{
 		int i, temp;
 		
-		for ( i = 0 ; i < myarr.length; i++) //sort
+		for ( i = 0 ; i < myarr.length; i++) //Descending array
 		{
 			for (int j = i+1 ; j < myarr.length; j++)
 			{
@@ -78,7 +80,7 @@ public class Question04 {
 	{
 		int i, temp;
 		
-		for ( i = 0 ; i < myarr.length; i++) //sort
+		for ( i = 0 ; i < myarr.length; i++) //Ascending array
 		{
 			for (int j = i+1 ; j < myarr.length; j++)
 			{
@@ -93,7 +95,7 @@ public class Question04 {
 		}
 	}
 
-	public static void printIntArray( int[] arr )
+	public static void printIntArray( int[] arr )  //output an array to terminal
 	{
 		for ( int i = 0; i < arr.length; i++)
 		{

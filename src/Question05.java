@@ -6,7 +6,7 @@ public class Question05 {
 		// TODO Auto-generated method stub
 		Scanner kb = new Scanner(System.in);
 
-        System.out.print("Enter the array element: ");
+        System.out.print("Enter the array element: "); //get keyboard input as a String
         String line = kb.nextLine();
 
         // Split the input line with ',' seperated into individual integers
@@ -18,7 +18,7 @@ public class Question05 {
             myarr[i] = Integer.parseInt(nums[i]);
         }
 		System.out.println("the array you input:");
-		printIntArray (myarr);
+		printIntArray (myarr); //output the input array
 
 		int count=1;
 
@@ -28,14 +28,14 @@ public class Question05 {
 			{
 				if ( i != j )
 				{
-					if (myarr[i] ==myarr[j])
+					if (myarr[i] ==myarr[j])  // count the element in an array duplicated times
 					{
 						count++;
 					}
 				}
 			}
 
-			if (count > myarr.length /2)
+			if (count > myarr.length /2) //if count > n/2, it is majority number
 			{
 				System.out.println("majority number is: " + myarr[i]);
 				break;
@@ -48,6 +48,7 @@ public class Question05 {
 		kb.close();
 	}
 
+	//output an array to terminal
 	public static void printIntArray( int[] arr )
 	{
 		for ( int i = 0; i < arr.length; i++)
