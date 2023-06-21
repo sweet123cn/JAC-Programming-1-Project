@@ -66,3 +66,40 @@ public class Question05 {
 	}
 
 }
+
+//寻找majority的另一种算法，共参考
+public static int findMajorityElement(int[] array) {         
+	int count = 0;         
+	int majorityElement = array[0];        
+	for (int i = 0; i < array.length; i++) 
+	{             
+		if (count == 0) 
+		{                 
+			majorityElement = array[i];                 
+			count = 1;             
+		} else if (majorityElement == array[i]) 
+		{                 
+			count++;             
+		} else 
+		{                 
+			count--;             
+		}         
+	} // 验证候选元素是否为主要元素        
+	count = 0;         
+	for (int i = 0; i < array.length; i++) 
+	{             
+		if (array[i] == majorityElement) 
+		{                 
+			count++;             
+		}        
+	}         
+	if (count > array.length / 2) 
+	{             
+		return majorityElement;         
+	} else 
+	{             
+		return 0; // 表示没有主要元素       
+	}    
+ } 
+
+}
