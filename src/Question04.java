@@ -5,17 +5,25 @@ public class Question04 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int[] myarr = getIntArray();
+		int[] myarr1 = getIntArray();
 
-		System.out.println("=======the input array=========");
+		int[] myarr2 = myarr1.clone();
 
-		printIntArray(myarr); 
+		System.out.println("=========input array=========");
 
-		sortIntArray(myarr);
+		printIntArray(myarr1); 
+
+		sortDescendingIntArray(myarr1); //Descending sort the array
 		
-		System.out.println("=======the array sorted=========");
+		System.out.println("=======Descending sorted=========");
 
-		printIntArray(myarr); //print the sorted array
+		printIntArray(myarr1); //print the sorted array
+
+		sortAscendingIntArray(myarr2); //Ascending sort the array
+		
+		System.out.println("=======Ascending sorted=========");
+
+		printIntArray(myarr2); //print the sorted array
 
 
 	}
@@ -47,7 +55,7 @@ public class Question04 {
 		return myarr;
 	}
 
-	public static void sortIntArray(int[] myarr)
+	public static void sortDescendingIntArray(int[] myarr)
 	{
 		int i, temp;
 		
@@ -57,6 +65,25 @@ public class Question04 {
 			{
 				
 				if ( myarr[i] < myarr[j])
+				{
+					temp = myarr[i];
+					myarr[i] = myarr[j];
+					myarr[j] = temp;
+				}
+			}
+		}
+	}
+
+	public static void sortAscendingIntArray(int[] myarr)
+	{
+		int i, temp;
+		
+		for ( i = 0 ; i < myarr.length; i++) //sort
+		{
+			for (int j = i+1 ; j < myarr.length; j++)
+			{
+				
+				if ( myarr[i] > myarr[j])
 				{
 					temp = myarr[i];
 					myarr[i] = myarr[j];
