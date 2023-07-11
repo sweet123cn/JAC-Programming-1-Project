@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
-public class Question05 {
+public class Question05 
+{
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -65,7 +66,7 @@ public class Question05 {
 		System.out.println();
 	}
 
-}
+
 
 //寻找majority的另一种算法，共参考
 public static int findMajorityElement(int[] array) {         
@@ -101,5 +102,4 @@ public static int findMajorityElement(int[] array) {
 		return 0; // 表示没有主要元素       
 	}    
  } 
-
 }
